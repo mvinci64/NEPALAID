@@ -1,0 +1,122 @@
+{
+  "com.sap::V_JAJARKOT_MSFT_BLDGS_45": {
+    "target": {
+      "object": "V_JAJARKOT_MSFT_BLDGS_45",
+      "schema": "NEPALAID"
+    }
+  },
+  "C_POIS": {
+    "target": {
+      "object": "C_POIS",
+      "schema": "NEPALAID"
+    }
+  },
+  "C_STREET_NETWORK": {
+    "target": {
+      "object": "C_STREET_NETWORK",
+      "schema": "NEPALAID"
+    }
+  },
+  "JAJARKOT_GROUP_1_2": {
+    "target": {
+      "object": "JAJARKOT_GROUP_1_2",
+      "schema": "NEPALAID"
+    }
+  },
+  "JAJARKOT_NEPAL_MSFT_BLDGS_QGIS": {
+    "target": {
+      "object": "JAJARKOT_NEPAL_MSFT_BLDGS_QGIS",
+      "schema": "NEPALAID"
+    }
+  },
+  "JAJARKOT_VISITED": {
+    "target": {
+      "object": "JAJARKOT_VISITED",
+      "schema": "NEPALAID"
+    }
+  },
+  "JAKARKOT_NEPAL_MSFT_BLDGS": {
+    "target": {
+      "object": "JAKARKOT_NEPAL_MSFT_BLDGS",
+      "schema": "NEPALAID"
+    }
+  },
+  "OSM_DISTRICT": {
+    "target": {
+      "object": "OSM_DISTRICT",
+      "schema": "NEPALAID"
+    }
+  },
+  "OSM_MUNICIPALITY": {
+    "target": {
+      "object": "OSM_MUNICIPALITY",
+      "schema": "NEPALAID"
+    }
+  },
+  "OSM_PROVINCE": {
+    "target": {
+      "object": "OSM_PROVINCE",
+      "schema": "NEPALAID"
+    }
+  },
+  "POIS": {
+    "target": {
+      "object": "POIS",
+      "schema": "NEPALAID"
+    }
+  },
+  "STREET_NETWORK_EDGES": {
+    "target": {
+      "object": "STREET_NETWORK_EDGES",
+      "schema": "NEPALAID"
+    }
+  },
+  "STREET_NETWORK_EDGES_SIMPLIFIED": {
+    "target": {
+      "object": "STREET_NETWORK_EDGES_SIMPLIFIED",
+      "schema": "NEPALAID"
+    }
+  },
+  "STREET_NETWORK_VERTICES": {
+    "target": {
+      "object": "STREET_NETWORK_VERTICES",
+      "schema": "NEPALAID"
+    }
+  },
+  "STREET_NETWORK_WAYS": {
+    "target": {
+      "object": "STREET_NETWORK_WAYS",
+      "schema": "NEPALAID"
+    }
+  },
+  "STREET_NETWORK_WAY_NODES": {
+    "target": {
+      "object": "STREET_NETWORK_WAY_NODES",
+      "schema": "NEPALAID"
+    }
+  },
+  "T_COMMUNITIES_VOR": {
+    "target": {
+      "object": "T_COMMUNITIES_VOR",
+      "schema": "NEPALAID"
+    }
+  },
+  "T_COMM_FEATURES_STRUCTURE_DPM": {
+    "target": {
+      "object": "T_COMM_FEATURES_STRUCTURE_DPM",
+      "schema": "NEPALAID"
+    }
+  },
+  "WARDS": {
+    "target": {
+      "object": "WARDS",
+      "schema": "NEPALAID"
+    }
+  },
+  "WARD_BOUNDARY_31_DISTRICTS": {
+    "target": {
+      "object": "WARD_BOUNDARY_31_DISTRICTS",
+      "schema": "NEPALAID"
+    }
+  }
+}

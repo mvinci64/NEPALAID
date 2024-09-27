@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="LIVAVIEW" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" hierarchyGeneration="SQL" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="true" application="BAS">
+<descriptions defaultDescription="Livaview"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="com.sap::V_JAJARKOT_MSFT_BLDGS_45">
+    <resourceUri>com.sap::V_JAJARKOT_MSFT_BLDGS_45</resourceUri>
+  </DataSource>
+</dataSources>
+<snapshotProcedures/>
+<calculationViews/>
+
+<logicalModel id="com.sap::V_JAJARKOT_MSFT_BLDGS_45">
+  <attributes>
+    <attribute id="SHAPE_6207" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SHAPE_6207"/>
+      <keyMapping columnObjectName="V_JAJARKOT_MSFT_BLDGS_45" columnName="SHAPE_6207"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="ID_0" order="1" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="id_0"/>
+      <measureMapping columnObjectName="V_JAJARKOT_MSFT_BLDGS_45" columnName="id_0"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="DAMAGE_PCT_0M" order="2" aggregationType="avg" measureType="simple">
+      <descriptions defaultDescription="damage_pct_0m"/>
+      <measureMapping columnObjectName="V_JAJARKOT_MSFT_BLDGS_45" columnName="damage_pct_0m"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+    <measure id="DAMAGED" order="3" aggregationType="count" measureType="simple">
+      <descriptions defaultDescription="damaged"/>
+      <measureMapping columnObjectName="V_JAJARKOT_MSFT_BLDGS_45" columnName="damaged"/>
+      <exceptionAggregationMetadata/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="100" y="105"/>
+    
+      <rectangleSize width="160"/>
+    </shape>
+    
+  </shapes>
+</layout>
+</Calculation:scenario>

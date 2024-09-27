@@ -1,0 +1,67 @@
+_schema-version: '3.1'
+ID: LivaCap
+version: 1.0.0
+description: "A simple CAP project."
+parameters:
+  enable-parallel-deployments: true
+build-parameters:
+  before-all:
+    - builder: custom
+      commands:
+        - npm ci
+        - npx cds build --production
+modules:
+  - name: LivaCap-srv
+    type: nodejs
+    path: gen/srv
+    parameters:
+      buildpack: nodejs_buildpack
+      readiness-health-check-type: http
+      readiness-health-check-http-endpoint: /health
+    build-parameters:
+      builder: npm
+    provides:
+      - name: srv-api # required by consumers of CAP services (e.g. approuter)
+        properties:
+          srv-url: ${default-url}
+    requires:
+      - name: LivaCap-auth
+      - name: LivaCap-db
+
+  - name: LivaCap-db-deployer
+    type: hdb
+    path: gen/db
+    parameters:
+      buildpack: nodejs_buildpack
+    requires:
+      - name: LivaCap-db
+      - name: cross-container-service-1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: ServiceName_1
+          service: ~{the-service-name}
+
+resources:
+  - name: LivaCap-auth
+    type: org.cloudfoundry.managed-service
+    parameters:
+      service: xsuaa
+      service-plan: application
+      path: ./xs-security.json
+      config:
+        xsappname: LivaCap-${space}
+        tenant-mode: dedicated
+  - name: LivaCap-db
+    type: com.sap.xs.hdi-container
+    parameters:
+      service: hana
+      service-plan: hdi-shared
+      config: 
+        database_id: 6a082e19-bb92-4534-9bc9-7785cb481bb7
+        schema: HDI_NepalAid2
+  - name: cross-container-service-1
+    type: org.cloudfoundry.existing-service
+    parameters:
+      service-name: myNepailAid
+    properties:
+      the-service-name: ${service-name}
